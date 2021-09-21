@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">challenge1useAcademy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title">Perguntas e Respostas</string>
+    <string name="answers">Respostas:</string>
+    <string name="try_again"><u>Tentar novamente</u></string>
+</resources>
