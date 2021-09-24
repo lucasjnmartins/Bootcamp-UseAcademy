@@ -5,13 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="44dp"
     android:background="@color/primaryColor"
-    android:outlineAmbientShadowColor="@android:color/transparent"
-    android:outlineSpotShadowColor="@android:color/transparent"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.appcompat.widget.Toolbar
+    <Toolbar
         android:id="@+id/toolbar_default"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -27,13 +25,14 @@
             android:textSize="17sp"/>
 
         <ImageView
+            android:id="@+id/b_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_arrow_back_ios_24"
-            android:visibility="visible"
+            android:visibility="gone"
             />
 
-    </androidx.appcompat.widget.Toolbar>
+    </Toolbar>
 
 
 </com.google.android.material.appbar.AppBarLayout>

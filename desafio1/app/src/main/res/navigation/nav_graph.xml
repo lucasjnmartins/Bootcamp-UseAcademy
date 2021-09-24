@@ -1,34 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    app:startDestination="@layout/fragment_start_screen">
+    app:startDestination="@id/startScreenFragment">
 
     <fragment
         android:id="@+id/startScreenFragment"
         android:name="com.example.challenge1useacademy.startScreenFragment"
         android:label="fragment_start_screen"
-        tools:layout="@layout/fragment_start_screen" >
+        tools:layout="@layout/fragment_start_screen">
         <action
             android:id="@+id/action_startScreenFragment_to_questionScreenFragment"
-            app:destination="@id/questionScreenFragment" />
+            app:destination="@id/questionScreenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
+
     <fragment
         android:id="@+id/questionScreenFragment"
         android:name="com.example.challenge1useacademy.questionScreenFragment"
         android:label="fragment_question_screen"
-        tools:layout="@layout/fragment_question_screen" >
-        <action
-            android:id="@+id/action_questionScreenFragment_to_startScreenFragment"
-            app:destination="@id/startScreenFragment" />
+        tools:layout="@layout/fragment_question_screen">
         <action
             android:id="@+id/action_questionScreenFragment_to_finalScreenFragment2"
-            app:destination="@id/finalScreenFragment2" />
+            app:destination="@id/finalScreenFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_questionScreenFragment_to_startScreenFragment"
+            app:destination="@id/startScreenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
+
     <fragment
         android:id="@+id/finalScreenFragment2"
         android:name="com.example.challenge1useacademy.finalScreenFragment"
         android:label="fragment_final_screen"
-        tools:layout="@layout/fragment_final_screen" />
+        tools:layout="@layout/fragment_final_screen">
+        <action
+            android:id="@+id/action_finalScreenFragment2_to_startScreenFragment"
+            app:destination="@id/startScreenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

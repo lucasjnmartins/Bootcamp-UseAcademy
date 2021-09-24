@@ -3,109 +3,192 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".questionScreenFragment">
+        android:background="@color/white"
+        android:orientation="vertical">
 
-        <!-- TODO: Update blank fragment layout -->
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="22dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-            <include
-                android:id="@+id/toolbar_default"
-                layout="@layout/toolbar" />
-
-
-            <TextView
-                android:id="@+id/tv_question"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="77dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="22dp"
-                android:layout_marginRight="24dp"
-                android:textSize="16sp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/toolbar_default"
-                tools:text="PErguntaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
-
-            <TextView
-                android:id="@+id/tv_answer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="15.9dp"
-                android:layout_marginRight="24dp"
-                android:text="@string/answers"
-                android:textColor="@color/primaryColor"
-                android:textSize="17sp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_question" />
-
-            <RadioGroup
-                android:id="@+id/rg_options"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="24dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_answer">
+                app:layout_constraintTop_toBottomOf="parent">
 
-                <RadioButton
-                    android:id="@+id/rb_option1"
+                <TextView
+                    android:id="@+id/tv_question"
                     android:layout_width="match_parent"
-                    android:layout_height="86dp"
-                    android:gravity="top"
-                    android:textSize="17sp"
-                    tools:text="Opção 1" />
+                    android:layout_height="77dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="PErguntaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
 
-                <RadioButton
-                    android:id="@+id/rb_option2"
-                    android:layout_width="match_parent"
-                    android:layout_height="86dp"
-                    android:layout_marginTop="16dp"
-                    android:gravity="top"
+                <TextView
+                    android:id="@+id/tv_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="15.9dp"
+                    android:layout_marginRight="24dp"
+                    android:text="@string/answers"
+                    android:textColor="@color/primaryColor"
                     android:textSize="17sp"
-                    tools:text="Opção 2" />
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_question" />
 
-                <RadioButton
-                    android:id="@+id/rb_option3"
-                    android:layout_width="match_parent"
-                    android:layout_height="86dp"
-                    android:layout_marginTop="16dp"
-                    android:gravity="top"
-                    android:textSize="17sp"
-                    tools:text="Opção 3" />
+                <LinearLayout
+                    android:id="@+id/ll_option1"
+                    style="@style/questions"
+                    android:background="@drawable/question_shape"
+                    android:clickable="true"
+                    android:padding="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_answer">
 
-                <RadioButton
-                    android:id="@+id/rb_option4"
-                    android:layout_width="match_parent"
-                    android:layout_height="86dp"
-                    android:layout_marginTop="16dp"
-                    android:gravity="top"
-                    android:textSize="17sp"
-                    tools:text="Opção 4" />
-            </RadioGroup>
+                    <CheckBox
+                        android:id="@+id/ck_op1"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="2.6dp"
+                        android:button="@drawable/ic_check_button"
+                        android:clickable="false" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="53dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginBottom="19dp"
-                android:background="@drawable/rounded_button"
-                android:backgroundTint="@color/primaryColor"
-                android:text="Responder"
-                android:textAllCaps="false"
-                android:textSize="18sp"
-                android:textStyle="normal"
-                app:layout_constraintBottom_toBottomOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </FrameLayout>
+                    <TextView
+                        android:id="@+id/tv_op1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6dp"
+                        android:clickable="false"
+                        android:textColor="@color/black"
+                        tools:text="Resposta1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_option2"
+                    style="@style/questions"
+                    android:background="@drawable/question_shape"
+                    android:clickable="true"
+                    android:padding="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll_option1">
+
+                    <CheckBox
+                        android:id="@+id/ck_op2"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="2.6dp"
+                        android:button="@drawable/ic_check_button"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/tv_op2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6dp"
+                        android:clickable="false"
+                        android:textColor="@color/black"
+                        tools:text="Resposta2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_option3"
+                    style="@style/questions"
+                    android:background="@drawable/question_shape"
+                    android:clickable="true"
+
+                    android:padding="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll_option2">
+
+                    <CheckBox
+                        android:id="@+id/ck_op3"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="2.6dp"
+                        android:button="@drawable/ic_check_button"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/tv_op3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6dp"
+                        android:clickable="false"
+                        android:textColor="@color/black"
+                        tools:text="Resposta3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_option4"
+                    style="@style/questions"
+                    android:background="@drawable/question_shape"
+                    android:clickable="true"
+                    android:padding="8dp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll_option3">
+
+                    <CheckBox
+                        android:id="@+id/ck_op4"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="2.6dp"
+                        android:button="@drawable/ic_check_button"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/tv_op4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6dp"
+                        android:clickable="false"
+                        android:textColor="@color/black"
+                        tools:text="Resposta4" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="19dp"
+            android:background="@drawable/rounded_button_gray"
+            android:text="Responder"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

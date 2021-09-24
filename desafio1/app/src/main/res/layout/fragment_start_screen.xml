@@ -10,7 +10,6 @@
         tools:context=".startScreenFragment">
 
         <!-- TODO: Update blank fragment layout -->
-        <include layout="@layout/toolbar" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -34,6 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13dp"
+                android:textColor="@color/black"
                 android:text="Responda 10 perguntas e veja sua pontuação no fim!"
                 android:textSize="12sp"
                 android:textStyle="normal"
@@ -42,6 +42,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_popup_title" />
 
             <Button
+                android:id="@+id/b_next"
                 android:layout_width="match_parent"
                 android:layout_height="53dp"
                 android:background="@drawable/rounded_button"

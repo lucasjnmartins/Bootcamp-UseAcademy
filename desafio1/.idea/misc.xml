@@ -3,13 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22615384615384615" />
         <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.2296875" />
+        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/drawable/ic_baseline_check_box_outline_blank_24.xml" value="0.22615384615384615" />
+        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/drawable/ic_check_button.xml" value="0.2296875" />
+        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/drawable/ic_check_button_checked.xml" value="0.2296875" />
+        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/drawable/ic_check_button_right.xml" value="0.2296875" />
+        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/drawable/ic_check_button_wrong.xml" value="0.2296875" />
+        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22615384615384615" />
         <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/drawable/pop_up_shape.xml" value="0.1814814814814815" />
-        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/drawable/rounded_button.xml" value="0.2296875" />
-        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/layout/activity_main.xml" value="0.15715579710144928" />
-        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/layout/fragment_final_screen.xml" value="0.2" />
+        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/drawable/question_checked.xml" value="0.2296875" />
+        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/drawable/question_right.xml" value="0.2296875" />
+        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/drawable/question_shape.xml" value="0.125" />
+        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/drawable/question_wrong.xml" value="0.2296875" />
+        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/drawable/rounded_button.xml" value="0.264" />
+        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/drawable/rounded_button_gray.xml" value="0.18958333333333333" />
+        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/layout/fragment_final_screen.xml" value="0.264" />
         <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/layout/fragment_question_screen.xml" value="0.2" />
-        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/layout/fragment_start_screen.xml" value="0.264" />
+        <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/layout/fragment_start_screen.xml" value="0.152" />
         <entry key="..\:/Users/Lucas/OneDrive/Documentos/GitHub/Bootcamp-UseAcademy/desafio1/app/src/main/res/layout/toolbar.xml" value="0.3369397217928903" />
       </map>
     </option>
