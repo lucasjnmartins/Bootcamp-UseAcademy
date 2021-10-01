@@ -7,6 +7,7 @@
     <string name="drama">Drama</string>
     <string name="resume">Sinopse</string>
     <string name="actors">Elenco</string>
+    <string name="title_info_screen">Detalhes do filme</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="asd">Para você</string>
 </resources>

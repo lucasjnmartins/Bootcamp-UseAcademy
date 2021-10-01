@@ -15,8 +15,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp">
 
                 <TextView
                     android:id="@+id/tv_release"
@@ -30,49 +30,60 @@
                     android:textStyle="normal"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/iv_release"
-                    android:layout_width="216dp"
-                    android:layout_height="316dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_release" />
-
-                <TextView
-                    android:id="@+id/tv_title_release"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/white"
-                    android:textSize="17sp"
-                    app:layout_constraintTop_toBottomOf="@id/iv_release"
-                    tools:text="Título do filme" />
-
-                <TextView
-                    android:id="@+id/tv_actors_release"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_release"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:textColor="@color/dark_gray"
-                    android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@id/tv_title_release"
-                    tools:text="Autores" />
+                    android:gravity="center_horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_release">
 
+                    <ImageView
+                        android:id="@+id/iv_release"
+                        android:layout_width="216dp"
+                        android:layout_height="316dp"
+                        android:layout_gravity="center_horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_title_release"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        app:layout_constraintTop_toBottomOf="@id/iv_release"
+                        tools:text="Título do filme" />
+
+                    <TextView
+                        android:id="@+id/tv_actors_release"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_title_release"
+                        tools:text="Autores" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/cl_for_you"
                     android:layout_width="match_parent"
-                    android:layout_height="254dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:orientation="vertical"
-                    app:layout_constraintTop_toBottomOf="@id/tv_actors_release"
+                    app:layout_constraintTop_toBottomOf="@id/cl_release"
                     tools:layout_editor_absoluteX="173dp">
 
                     <TextView
+                        android:id="@+id/tv_for_you"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -96,10 +107,12 @@
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rv_for_you"
                         android:layout_width="match_parent"
-                        android:layout_height="215dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="1dp"
+                        android:layout_marginTop="14dp"
                         android:orientation="horizontal"
-                        app:layout_constraintBottom_toBottomOf="parent" />
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_for_you" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -111,6 +124,7 @@
                     app:layout_constraintTop_toBottomOf="@id/cl_for_you">
 
                     <TextView
+                        android:id="@+id/tv_action"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -136,8 +150,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="215dp"
                         android:layout_marginStart="1dp"
+                        android:layout_marginTop="14dp"
                         android:orientation="horizontal"
-                        app:layout_constraintBottom_toBottomOf="parent" />
+                        app:layout_constraintTop_toBottomOf="@id/tv_action" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -149,6 +164,7 @@
                     app:layout_constraintTop_toBottomOf="@id/cl_action">
 
                     <TextView
+                        android:id="@+id/tv_drama"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -174,8 +190,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="215dp"
                         android:layout_marginStart="1dp"
+                        android:layout_marginTop="14dp"
                         android:orientation="horizontal"
-                        app:layout_constraintBottom_toBottomOf="parent" />
+                        app:layout_constraintTop_toBottomOf="@id/tv_drama" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>

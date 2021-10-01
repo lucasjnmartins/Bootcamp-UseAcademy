@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -54,6 +55,19 @@ class startScreen() : Fragment() {
                 layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
                 adapter = moviesAdapterDrama
             }
+
+            tvSeeMoreForYou.setOnClickListener {
+                findNavController().navigate(startScreenDirections.actionStartScreenToSeeMore(getString(R.string.for_you)))
+            }
+            tvSeeMoreAction.setOnClickListener {
+                findNavController().navigate(startScreenDirections.actionStartScreenToSeeMore(getString(R.string.action)))
+            }
+            tvSeeMoreDrama.setOnClickListener {
+                findNavController().navigate(startScreenDirections.actionStartScreenToSeeMore(getString(R.string.drama)))
+            }
+            clRelease.setOnClickListener {
+                startViewModel.release.value?.let { it1 -> navigateToInfoScreen(it1) }
+            }
         }
 
         startViewModel.fetchMovies()
@@ -77,7 +91,7 @@ class startScreen() : Fragment() {
             binding.apply {
                 Picasso.get().load(startViewModel.release.value?.image).into(ivRelease)
                 tvTitleRelease.text = startViewModel.release.value?.title
-                tvActorsRelease.text = (startViewModel.release.value?.crew)
+                tvActorsRelease.text = startViewModel.release.value?.crew
             }
         })
     }
@@ -93,6 +107,7 @@ class startScreen() : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentStartScreenBinding.inflate(layoutInflater)
         activity?.findViewById<ImageView>(R.id.b_back_toolbar)?.isVisible = false
+        activity?.findViewById<TextView>(R.id.tv_toolbar)?.text = getString(R.string.title)
         return binding.root
     }
 

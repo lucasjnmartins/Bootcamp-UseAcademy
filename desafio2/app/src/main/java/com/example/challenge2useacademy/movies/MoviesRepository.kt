@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 class MoviesRepository(private val moviesService: MoviesService) {
-    suspend fun getDetailMovies(id: String): Flow<ResponseMovies> =
+    suspend fun getDetailMovies(id: String): Flow<ResponseMovieDetails> =
         flow {
             emit(moviesService.getDetailMovies(GlobalVariables.api, id))
         }

@@ -6,13 +6,19 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import com.google.gson.GsonBuilder
+
+import com.google.gson.Gson
+
+
+
 
 class MoviesAPI {
 
     companion object {
         private lateinit var retrofit: Retrofit
 
-        private var base_url = "https://imdb-api.com/en/"
+        private var base_url = "https://imdb-api.com/pt/"
 
         fun getRetrofit(): Retrofit {
 
