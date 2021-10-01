@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/tv_release"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Lançamento"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="normal"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_release"
+                    android:layout_width="216dp"
+                    android:layout_height="316dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_release" />
+
+                <TextView
+                    android:id="@+id/tv_title_release"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    app:layout_constraintTop_toBottomOf="@id/iv_release"
+                    tools:text="Título do filme" />
+
+                <TextView
+                    android:id="@+id/tv_actors_release"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title_release"
+                    tools:text="Autores" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_for_you"
+                    android:layout_width="match_parent"
+                    android:layout_height="254dp"
+                    android:layout_marginTop="32dp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/tv_actors_release"
+                    tools:layout_editor_absoluteX="173dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/for_you"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_see_more_for_you"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/see_more"
+                        android:textColor="@color/dark_yellow"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_for_you"
+                        android:layout_width="match_parent"
+                        android:layout_height="215dp"
+                        android:layout_marginStart="1dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="254dp"
+                    android:layout_marginTop="32dp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/cl_for_you">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/action"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_see_more_action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/see_more"
+                        android:textColor="@color/dark_yellow"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_action"
+                        android:layout_width="match_parent"
+                        android:layout_height="215dp"
+                        android:layout_marginStart="1dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_drama"
+                    android:layout_width="match_parent"
+                    android:layout_height="254dp"
+                    android:layout_marginTop="32dp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/cl_action">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/drama"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_see_more_drama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/see_more"
+                        android:textColor="@color/dark_yellow"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_drama"
+                        android:layout_width="match_parent"
+                        android:layout_height="215dp"
+                        android:layout_marginStart="1dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </FrameLayout>
+</layout>
