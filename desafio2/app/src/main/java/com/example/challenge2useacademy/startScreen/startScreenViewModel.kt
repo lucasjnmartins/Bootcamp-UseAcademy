@@ -12,7 +12,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class startScreenViewModel: ViewModel() {
     private val service: MoviesService = MoviesAPI().createService(MoviesService::class.java)

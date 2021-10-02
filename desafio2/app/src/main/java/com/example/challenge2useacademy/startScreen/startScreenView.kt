@@ -23,11 +23,12 @@ import com.squareup.picasso.Picasso
 
 class startScreen() : Fragment() {
 
-    private lateinit var  startViewModel: startScreenViewModel
+    private lateinit var startViewModel: startScreenViewModel
     private lateinit var binding: FragmentStartScreenBinding
     lateinit var moviesAdapterForYou: RecyclerViewAdapterForYou
     lateinit var moviesAdapterAction: RecyclerViewAdapterAction
     lateinit var moviesAdapterDrama: RecyclerViewAdapterDrama
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -44,26 +45,41 @@ class startScreen() : Fragment() {
 
         binding.apply {
             rvForYou.apply {
-                layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+                layoutManager =
+                    LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
                 adapter = moviesAdapterForYou
             }
             rvAction.apply {
-                layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+                layoutManager =
+                    LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
                 adapter = moviesAdapterAction
             }
             rvDrama.apply {
-                layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+                layoutManager =
+                    LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
                 adapter = moviesAdapterDrama
             }
 
             tvSeeMoreForYou.setOnClickListener {
-                findNavController().navigate(startScreenDirections.actionStartScreenToSeeMore(getString(R.string.for_you)))
+                findNavController().navigate(
+                    startScreenDirections.actionStartScreenToSeeMore(
+                        getString(R.string.for_you)
+                    )
+                )
             }
             tvSeeMoreAction.setOnClickListener {
-                findNavController().navigate(startScreenDirections.actionStartScreenToSeeMore(getString(R.string.action)))
+                findNavController().navigate(
+                    startScreenDirections.actionStartScreenToSeeMore(
+                        getString(R.string.action)
+                    )
+                )
             }
             tvSeeMoreDrama.setOnClickListener {
-                findNavController().navigate(startScreenDirections.actionStartScreenToSeeMore(getString(R.string.drama)))
+                findNavController().navigate(
+                    startScreenDirections.actionStartScreenToSeeMore(
+                        getString(R.string.drama)
+                    )
+                )
             }
             clRelease.setOnClickListener {
                 startViewModel.release.value?.let { it1 -> navigateToInfoScreen(it1) }
@@ -72,7 +88,7 @@ class startScreen() : Fragment() {
 
         startViewModel.fetchMovies()
 
-        startViewModel.movieListForYou.observe(viewLifecycleOwner, Observer {movies ->
+        startViewModel.movieListForYou.observe(viewLifecycleOwner, Observer { movies ->
             movies?.let {
                 moviesAdapterForYou.update(it)
             }

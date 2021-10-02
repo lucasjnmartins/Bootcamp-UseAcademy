@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityView"
             android:exported="true"
             android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
