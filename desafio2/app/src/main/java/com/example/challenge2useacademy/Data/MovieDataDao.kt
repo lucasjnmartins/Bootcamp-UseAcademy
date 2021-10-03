@@ -4,22 +4,18 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.challenge2useacademy.movies.Movies
 
 
 @Dao
 interface MovieDataDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(vararg movie: MovieData)
+    suspend fun insert(vararg movie: Movies)
 
+    @Query("SELECT * FROM Movies")
+    suspend fun getAll(): List<Movies>
 
-
-    @Query("SELECT * FROM moviedata")
-    suspend fun getAll(): List<MovieData>
-
-//    @Query("DELETE from * WHERE ")
-//    suspend fun deleteAll()
-
+    @Query("SELECT * FROM movies WHERE genre=(:genreString)")
+    suspend fun getByGenre(genreString: String): List<Movies>
 
 }

@@ -1,19 +1,7 @@
 package com.example.challenge2useacademy.movies
 
+import com.example.challenge2useacademy.Data.Movies
 import com.google.gson.annotations.SerializedName
-
-data class Movies(
-    @SerializedName("id")
-    val id: String,
-    @SerializedName("title")
-    val title: String,
-    @SerializedName("year")
-    val year: String,
-    @SerializedName("image")
-    val image: String,
-    @SerializedName("crew")
-    val crew: String
-)
 
 data class Actor(
     @SerializedName("id")

@@ -7,7 +7,7 @@ import com.example.challenge2useacademy.movies.Actor
 import java.lang.reflect.Constructor
 
 @Entity
-data class MovieData(
+data class Movies(
     @PrimaryKey
     var id: String,
 
@@ -16,6 +16,9 @@ data class MovieData(
 
     @ColumnInfo(name = "image")
     val image: String,
+
+    @ColumnInfo(name = "crew")
+    val crew: String,
 
     @ColumnInfo(name = "year")
     val year: String,

@@ -12,16 +12,16 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.challenge2useacademy.Data.Movies
 import com.example.challenge2useacademy.R
 import com.example.challenge2useacademy.Recyclers.RecyclerViewAdapterAction
 import com.example.challenge2useacademy.Recyclers.RecyclerViewAdapterDrama
 import com.example.challenge2useacademy.Recyclers.RecyclerViewAdapterForYou
 import com.example.challenge2useacademy.databinding.FragmentStartScreenBinding
-import com.example.challenge2useacademy.movies.Movies
 import com.squareup.picasso.Picasso
 
 
-class startScreen() : Fragment() {
+class startScreen : Fragment() {
 
     private lateinit var startViewModel: startScreenViewModel
     private lateinit var binding: FragmentStartScreenBinding
@@ -86,7 +86,7 @@ class startScreen() : Fragment() {
             }
         }
 
-        startViewModel.fetchMovies()
+        startViewModel.fetchMovies(this, 10)
 
         startViewModel.movieListForYou.observe(viewLifecycleOwner, Observer { movies ->
             movies?.let {

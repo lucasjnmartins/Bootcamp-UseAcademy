@@ -4,18 +4,14 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.challenge2useacademy.movies.Movies
-import com.example.challenge2useacademy.movies.MoviesAPI
-import com.example.challenge2useacademy.movies.MoviesRepository
-import com.example.challenge2useacademy.movies.MoviesService
+import com.example.challenge2useacademy.Data.Movies
+import com.example.challenge2useacademy.Data.RoomConection
+import com.example.challenge2useacademy.R
+import com.example.challenge2useacademy.seeMore
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class seeMoreViewModel: ViewModel() {
-    private val service: MoviesService = MoviesAPI().createService(MoviesService::class.java)
-    private val repository: MoviesRepository = MoviesRepository(service)
+class seeMoreViewModel : ViewModel() {
     private val _moviesListForYou: MutableLiveData<List<Movies>> = MutableLiveData<List<Movies>>()
     private val _moviesListAction: MutableLiveData<List<Movies>> = MutableLiveData<List<Movies>>()
     private val _moviesListDrama: MutableLiveData<List<Movies>> = MutableLiveData<List<Movies>>()
@@ -23,28 +19,31 @@ class seeMoreViewModel: ViewModel() {
     val movieListAction: LiveData<List<Movies>> = _moviesListAction
     val movieListDrama: LiveData<List<Movies>> = _moviesListDrama
 
-    fun fetchMovies() {
+    fun fetchMovies(context: seeMore) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.getMovies().catch {
-
-            }.collect {
-                launch(Dispatchers.Main) {
-                    initList(_moviesListForYou, it.item, 0, 49)
-                    initList(_moviesListAction, it.item, 50, 99)
-                    initList(_moviesListDrama, it.item, 100, 149)
-                }
+            val database = RoomConection(context.requireContext()).db()
+            launch(Dispatchers.Main) {
+                initList(
+                    _moviesListForYou,
+                    database.MovieDataDao().getByGenre(context.getString(R.string.for_you))
+                )
+                initList(
+                    _moviesListAction,
+                    database.MovieDataDao().getByGenre(context.getString(R.string.action))
+                )
+                initList(
+                    _moviesListDrama,
+                    database.MovieDataDao().getByGenre(context.getString(R.string.drama))
+                )
             }
         }
     }
 
-    private fun initList(list: MutableLiveData<List<Movies>>, base: List<Movies>, start: Int, end: Int) {
+    private fun initList(list: MutableLiveData<List<Movies>>, base: List<Movies>) {
         val setListAux: ArrayList<Movies> = arrayListOf()
-        for(i in start until end){
+        for (i in 0 until base.size) {
             setListAux.add(base[i])
         }
-        list.value = setListAux
+        list.postValue(setListAux)
     }
-
-
-
 }

@@ -2,6 +2,6 @@ package com.example.challenge2useacademy
 
 class GlobalVariables {
     companion object{
-        val api: String = "k_dq3eesdh"
+        val api: String = "k_wso02ah7"
     }
 }

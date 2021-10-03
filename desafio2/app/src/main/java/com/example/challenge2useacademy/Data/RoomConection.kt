@@ -8,5 +8,7 @@ class RoomConection(private val context: Context) {
         context,
         AppDataBase::class.java,
         "movies-database"
-    ).build()
+    )
+        .allowMainThreadQueries()
+        .build()
 }

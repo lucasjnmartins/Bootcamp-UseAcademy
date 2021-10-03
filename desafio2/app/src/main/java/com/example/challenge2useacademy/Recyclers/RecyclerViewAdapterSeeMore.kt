@@ -3,9 +3,8 @@ package com.example.challenge2useacademy.Recyclers
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.challenge2useacademy.databinding.ItemListsLayoutBinding
+import com.example.challenge2useacademy.Data.Movies
 import com.example.challenge2useacademy.databinding.ItemSeeMoreLayoutBinding
-import com.example.challenge2useacademy.movies.Movies
 import com.squareup.picasso.Picasso
 
 class RecyclerViewAdapterSeeMore(

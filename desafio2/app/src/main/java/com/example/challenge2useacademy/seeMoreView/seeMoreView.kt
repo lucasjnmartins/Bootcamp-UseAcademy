@@ -13,11 +13,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.challenge2useacademy.Data.Movies
 import com.example.challenge2useacademy.Recyclers.RecyclerViewAdapterSeeMore
 import com.example.challenge2useacademy.databinding.FragmentSeeMoreBinding
-import com.example.challenge2useacademy.movies.Movies
 import com.example.challenge2useacademy.seeMoreView.seeMoreViewModel
-import com.example.challenge2useacademy.startScreen.startScreenDirections
 
 
 class seeMore : Fragment() {
@@ -45,7 +44,7 @@ class seeMore : Fragment() {
             findNavController().popBackStack()
         }
 
-        seeMoreViewModel.fetchMovies()
+        seeMoreViewModel.fetchMovies(this)
 
         seeMoreViewModel.movieListForYou.observe(viewLifecycleOwner, Observer {
             if(args.genre == getString(R.string.for_you)) {

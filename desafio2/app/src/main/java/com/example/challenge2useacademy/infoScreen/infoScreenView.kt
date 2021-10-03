@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
@@ -17,8 +16,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.challenge2useacademy.Recyclers.RecyclerViewAdapterActors
 import com.example.challenge2useacademy.databinding.FragmentInfoScreenBinding
 import com.example.challenge2useacademy.infoScreen.infoScreenViewModel
-import com.example.challenge2useacademy.movies.Movies
-import com.example.challenge2useacademy.startScreen.startScreenDirections
 import com.squareup.picasso.Picasso
 
 

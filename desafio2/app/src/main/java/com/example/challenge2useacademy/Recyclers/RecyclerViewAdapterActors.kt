@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.challenge2useacademy.databinding.ItemActorsLayoutBinding
 import com.example.challenge2useacademy.movies.Actor
-import com.example.challenge2useacademy.movies.Movies
 import com.squareup.picasso.Picasso
 
 class RecyclerViewAdapterActors(

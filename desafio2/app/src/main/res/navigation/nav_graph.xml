@@ -45,4 +45,5 @@
             android:name="genre"
             app:argType="string" />
     </fragment>
+
 </navigation>
