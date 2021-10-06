@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">feed</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="feed">Feed</string>
+    <string name="profile">Perfil</string>
+    <string name="post">Postar</string>
+    <string name="user">Usuário</string>
+    <string name="password">Senha</string>
+    <string name="register">Cadastrar</string>
+    <string name="create_user">Crie seu usuário</string>
+    <string name="login">Entrar</string>
+    <string name="create_user_button"><u>Criar uma conta para o aplicativo</u></string>
+    <string name="enter_app">Entrar no aplicativo</string>
+    <string name="name">Nome</string>
+    <string name="last_name">Sobrenome</string>
+    <string name="mail">Email</string>
+</resources>

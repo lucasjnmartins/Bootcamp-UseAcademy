@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/bb_feed"
+        android:layout_width="35dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="25dp" >
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="26dp"
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_grupo_feed"
+            app:tint="@color/primary_color_yellow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:textStyle="normal"
+            android:textColor="@color/primary_color_yellow"
+            android:text="@string/feed"
+            android:layout_marginTop="3dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bb_post"
+        android:layout_width="35dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="26dp"
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_grupo_post"
+            app:tint="@color/bottom_bar_black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:textStyle="normal"
+            android:textColor="@color/bottom_bar_black"
+            android:text="@string/post"
+            android:layout_marginTop="3dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bb_profile"
+        android:layout_width="35dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="25dp">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="26dp"
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_user"
+            app:tint="@color/bottom_bar_black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:textStyle="normal"
+            android:textColor="@color/bottom_bar_black"
+            android:text="@string/profile"
+            android:layout_marginTop="3dp" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

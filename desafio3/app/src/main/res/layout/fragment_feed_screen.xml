@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Feed.FeedScreenView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_feed" >
+
+        <EditText
+            android:background="@color/white"
+            android:id="@+id/et_feed"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:hint="Adicione uma postagem"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_feed"
+            android:background="@color/white"
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/et_feed" />
+
+        <include
+            layout="@layout/bottombar"
+            android:id="@+id/bottombar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="52dp"
+            android:layout_width="match_parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
