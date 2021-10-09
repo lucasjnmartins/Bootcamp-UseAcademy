@@ -11,4 +11,5 @@
     <color name="primary_color_yellow">#F6CB46</color>
     <color name="background_feed">#D4D4D4</color>
     <color name="bottom_bar_black">#262626</color>
+    <color name="light_gray">#BEBEBE</color>
 </resources>

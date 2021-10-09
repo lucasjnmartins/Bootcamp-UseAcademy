@@ -1,18 +1,13 @@
-package com.example.feed.Feed
+package com.example.feed
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.feed.R
-import com.example.feed.databinding.FragmentFeedScreenBinding
-import com.example.feed.databinding.FragmentLoginScreenBinding
 
 
-class FeedScreenView : Fragment() {
-
-    private lateinit var binding: FragmentFeedScreenBinding
+class PostComentScreen : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,8 +19,6 @@ class FeedScreenView : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentFeedScreenBinding.inflate(layoutInflater)
-        return binding.root
+        return inflater.inflate(R.layout.fragment_post_coment_screen, container, false)
     }
-
 }

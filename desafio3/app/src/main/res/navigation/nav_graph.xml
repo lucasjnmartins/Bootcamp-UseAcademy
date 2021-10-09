@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/feedScreen">
+    app:startDestination="@id/loginScreen">
 
     <fragment
         android:id="@+id/feedScreen"
@@ -48,4 +48,9 @@
             android:id="@+id/action_newUserScreen_to_loginScreen"
             app:destination="@id/loginScreen" />
     </fragment>
+    <fragment
+        android:id="@+id/postComentScreen"
+        android:name="com.example.feed.PostComentScreen"
+        android:label="fragment_post_coment_screen"
+        tools:layout="@layout/fragment_post_coment_screen" />
 </navigation>

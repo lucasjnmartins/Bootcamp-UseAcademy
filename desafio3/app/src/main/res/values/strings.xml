@@ -15,4 +15,8 @@
     <string name="name">Nome</string>
     <string name="last_name">Sobrenome</string>
     <string name="mail">Email</string>
+    <string name="like">curtidas</string>
+    <string name="comments">comentários</string>
+    <string name="username">Usuário</string>
+    <string name="login_successful">Login realizado.</string>
 </resources>

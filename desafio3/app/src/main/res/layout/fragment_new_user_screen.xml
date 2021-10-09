@@ -1,73 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".CreateUser.NewUserScreenView" >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white" >
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:padding="20dp" >
+        android:layout_height="match_parent"
+        tools:context=".CreateUser.NewUserScreenView" >
 
-        <TextView
-            android:id="@+id/tv_create_user"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/create_user"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:gravity="center"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_gravity="center">
 
-        <EditText
-            android:id="@+id/et_new_user_name"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:hint="@string/name"
-            android:layout_marginTop="30dp"
-            app:layout_constraintTop_toBottomOf="@id/tv_create_user" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="20dp">
 
-        <EditText
-            android:id="@+id/et_new_user_last_name"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:hint="@string/last_name"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@id/et_new_user_name" />
+                <TextView
+                    android:id="@+id/tv_create_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/create_user"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/et_new_user_user"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:hint="@string/mail"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@id/et_new_user_last_name" />
+                <EditText
+                    android:id="@+id/et_new_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="30dp"
+                    android:hint="@string/name"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/light_gray"
+                    app:layout_constraintTop_toBottomOf="@id/tv_create_user" />
 
-        <EditText
-            android:id="@+id/et_new_user_password"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            app:layout_constraintTop_toBottomOf="@id/et_new_user_user"
-            android:layout_marginTop="20dp" />
+                <EditText
+                    android:id="@+id/et_new_user_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/last_name"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/light_gray"
+                    app:layout_constraintTop_toBottomOf="@id/et_new_user_name" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="20dp"
-            android:textSize="17sp"
-            android:backgroundTint="@color/primary_color_yellow"
-            android:textColor="@color/black"
-            android:text="@string/register"
-            android:background="@drawable/button_rounded"
-            android:textAllCaps="false"
-            app:layout_constraintTop_toBottomOf="@id/et_new_user_password" />
+                <EditText
+                    android:id="@+id/et_new_user_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/username"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/light_gray"
+                    app:layout_constraintTop_toBottomOf="@id/et_new_user_last_name" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+                <EditText
+                    android:id="@+id/et_new_user_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/password"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/light_gray"
+                    android:inputType="textPassword"
+                    app:layout_constraintTop_toBottomOf="@id/et_new_user_username" />
+
+                <Button
+                    android:id="@+id/bt_add_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="@color/primary_color_yellow"
+                    android:text="@string/register"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_new_user_password" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </FrameLayout>
+</layout>
