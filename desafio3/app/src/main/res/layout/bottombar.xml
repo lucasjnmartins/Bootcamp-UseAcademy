@@ -15,6 +15,7 @@
         android:layout_marginStart="25dp" >
 
         <ImageView
+            android:id="@+id/bb_iv_feed"
             android:layout_gravity="center"
             android:layout_width="26dp"
             android:layout_marginTop="7dp"
@@ -23,6 +24,7 @@
             app:tint="@color/primary_color_yellow" />
 
         <TextView
+            android:id="@+id/bb_tv_feed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="11sp"
@@ -43,6 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
+            android:id="@+id/bb_iv_post"
             android:layout_gravity="center"
             android:layout_width="26dp"
             android:layout_marginTop="7dp"
@@ -51,6 +54,7 @@
             app:tint="@color/bottom_bar_black" />
 
         <TextView
+            android:id="@+id/bb_tv_post"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="11sp"
@@ -71,6 +75,7 @@
         android:layout_marginEnd="25dp">
 
         <ImageView
+            android:id="@+id/bb_iv_profile"
             android:layout_gravity="center"
             android:layout_width="26dp"
             android:layout_marginTop="7dp"
@@ -79,6 +84,7 @@
             app:tint="@color/bottom_bar_black" />
 
         <TextView
+            android:id="@+id/bb_tv_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="11sp"

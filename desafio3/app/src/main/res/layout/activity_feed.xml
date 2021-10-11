@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Feed.FeedActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+            <fragment
+                android:id="@+id/nav_host_feed_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                app:defaultNavHost="true"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                app:layout_constraintBottom_toTopOf="@id/bottombar"
+                app:navGraph="@navigation/nav_graph_feed" />
+
+            <include
+                android:id="@+id/bottombar"
+                layout="@layout/bottombar"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

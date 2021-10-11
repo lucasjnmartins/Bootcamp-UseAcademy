@@ -19,4 +19,6 @@
     <string name="comments">comentários</string>
     <string name="username">Usuário</string>
     <string name="login_successful">Login realizado.</string>
+    <string name="shared_preferences">general_preferences</string>
+    <string name="publish">Publicar</string>
 </resources>

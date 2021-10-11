@@ -1,51 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Post.PostScreenView">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context=".Feed.View.PostScreenView">
 
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/ic_profile_image"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="13dp"
-            android:text="Joao Balalaum"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="@id/ic_profile_image"
-            app:layout_constraintStart_toEndOf="@id/ic_profile_image"
-            app:layout_constraintTop_toTopOf="@id/ic_profile_image" />
-
-        <EditText
-            android:id="@+id/et_new_post"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            app:layout_constraintBottom_toBottomOf="@id/bottombar"
-            app:layout_constraintTop_toBottomOf="@id/ic_profile_image"
+            android:layout_height="match_parent">
 
-            />
 
-        <include
-            android:id="@+id/bottombar"
-            layout="@layout/bottombar"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ic_profile_image"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:text="Joao Balalaum"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/ic_profile_image"
+                app:layout_constraintStart_toEndOf="@id/ic_profile_image"
+                app:layout_constraintTop_toTopOf="@id/ic_profile_image" />
+
+            <EditText
+                android:id="@+id/et_new_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:layout_constraintBottom_toBottomOf="@id/bt_publish"
+                app:layout_constraintTop_toBottomOf="@id/ic_profile_image" />
+
+            <Button
+                android:id="@+id/bt_publish"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/light_gray"
+                android:text="@string/publish"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>
